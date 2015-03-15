@@ -1,5 +1,5 @@
 {
-  "name": "OpenShift-Sample-App",
+  "name": "name-of-project",
   "version": "1.0.0",
   "description": "OpenShift Sample Application",
   "keywords": [
@@ -25,16 +25,12 @@
   },
 
   "dependencies": {
-    "express": "3.x",
-    "ejs": "*",
-    "stylus": "*"
+	"express": "3.2.x",
+	"jade": "0.30.x"
   },
   "devDependencies": {},
   "bundleDependencies": [],
 
   "private": true,
-  "main": "server.js",
-  "scripts": {
-    "start": "node server"
-  }
+  "main": "server.js"
 }
