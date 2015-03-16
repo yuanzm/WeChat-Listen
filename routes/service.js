@@ -9,10 +9,10 @@ router.get('/', function(req, res, next) {
   	var reqObj = url.parse(req.url, true),
 		params = reqObj['query'],
 		signature = params['signature'],
-		timestap = params['timestap'],
+		timestamp = params['timestamp'],
 		nonce = params['nonce'],
 		echostr = params['echostr'],
-		tmpArr = [TOKEN, timestap, nonce];
+		tmpArr = [TOKEN, timestamp, nonce];
 
 	tmpArr.sort();
 	var tmpStr = tmpArr.join('');
