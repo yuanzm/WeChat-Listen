@@ -33,8 +33,6 @@ app.use('/users', users);
 //wechat
 app.use('/service', service);
 
-app.use('/weixin', wechat);
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
