@@ -4,7 +4,7 @@ var router = express.Router();
 var weixin = require('weixin-api');
 
 /* GET home page. */
-router.get('/weixin', function(req, res, next) {
+router.get('/service', function(req, res, next) {
     if (weixin.checkSignature(req)) {
         res.send(200, req.query.echostr);
     } else {
@@ -83,7 +83,7 @@ weixin.textMsg(function(msg) {
     weixin.sendMsg(resMsg);
 });
 
-router.post('/weixin', function(req, res) {
+router.post('/service', function(req, res) {
 	weixin.loop(req, res);
 })
 
