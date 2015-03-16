@@ -5,7 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var connext = require('connect')
+var connect = require('connect')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -39,7 +39,7 @@ var config = {
   encodingAESKey: 'BTln28ZsCpnFeVZ6oor0rSX8vaoBaXPfgNheQDsTzuo'
 };
 
-app.use(connect.query()); // Or app.use(express.query());
+app.use(express.query()); // Or app.use(express.query());
 app.use('/wechat', wechat(config, function (req, res, next) {
   // 微信输入信息都在req.weixin上
   var message = req.weixin;
